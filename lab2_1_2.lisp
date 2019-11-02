@@ -1,0 +1,6 @@
+(list 45 89 13 25 61 21 17 33)
+(defun delete_by_number(number lst)
+    (let ((start_lst  (subseq lst 0 (- number 1)))
+          (end_lst (subseq lst number)))
+        (concatenate 'list start_lst end_lst)))
+(delete_by_number 5 '(45 89 13 25 61 21 17 33))
