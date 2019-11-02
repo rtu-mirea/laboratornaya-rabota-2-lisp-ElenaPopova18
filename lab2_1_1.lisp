@@ -1,0 +1,7 @@
+(list 45 89 13 25 61 21 17 33)
+(defun insert_by_number (number element lst)
+    (let ((start_lst  (subseq lst 0 number))
+          (end_lst (subseq lst number)))
+        (push element end_lst)
+        (concatenate 'list start_lst end_lst)))
+(insert_by_number 5 '1000 '(45 89 13 25 61 21 17 33))
