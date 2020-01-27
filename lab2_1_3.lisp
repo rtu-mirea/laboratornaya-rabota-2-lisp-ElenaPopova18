@@ -1,5 +1,8 @@
-(defconstant L (list 10 11 6 2 89 3 25 4 5 9 78 62 25))
-(defun found (list elem)
-(cond ((eq elem (car list)) 0)
-        (t (+ 1 (found elem (cdr list))))))
-(found L 11)  
+(defun findElement (el lst)
+    (loop
+    for element in lst
+    and position from 0
+    when (eql element el)
+        collect position))
+
+(findElement 10 (list 99 10 15 18 22 11 3))
